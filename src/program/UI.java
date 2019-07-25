@@ -1,5 +1,6 @@
 package program;
 
+import gamematch.ChessMatch;
 import gamematch.ChessPiece;
 import gamematch.ChessPosition;
 import gamematch.Color;
@@ -49,9 +50,16 @@ public class UI {
         }
     }
 
+    public static void printMatch (ChessMatch chessMatch) {
+        printBoard(chessMatch.getPieces());
+        System.out.println();
+        System.out.println("Turn: " + chessMatch.getTurn());
+        System.out.println("Current player: " + chessMatch.getCurrentPlayer());
+    }
+
     public static void printBoard (ChessPiece[][] pieces) {
-        for (int i=0; i<pieces.length; i++) {
-            System.out.print((8-i) + " ");
+        for (int i = 0; i < pieces.length; i++) {
+            System.out.print((8 - i) + " ");
             for (int j = 0; j < pieces.length; j++) {
                 printPiece(pieces[i][j], false);
             }
@@ -60,9 +68,9 @@ public class UI {
         System.out.println("  a b c d e f g h");
     }
 
-    public static void printBoard (ChessPiece[][] pieces, boolean[][] possibleMoves) {
-        for (int i=0; i<pieces.length; i++) {
-            System.out.print((8-i) + " ");
+    public static void printBoard(ChessPiece[][] pieces, boolean[][] possibleMoves) {
+        for (int i = 0; i < pieces.length; i++) {
+            System.out.print((8 - i) + " ");
             for (int j = 0; j < pieces.length; j++) {
                 printPiece(pieces[i][j], possibleMoves[i][j]);
             }
@@ -71,12 +79,12 @@ public class UI {
         System.out.println("  a b c d e f g h");
     }
 
-    private static void printPiece (ChessPiece piece, boolean background) {
+    private static void printPiece(ChessPiece piece, boolean background) {
         if (background) {
-            System.out.print(ANSI_CYAN_BACKGROUND);
+            System.out.print(ANSI_BLUE_BACKGROUND);
         }
         if (piece == null) {
-            System.out.print("-");
+            System.out.print("-" + ANSI_RESET);
         }
         else {
             if (piece.getColor() == Color.WHITE) {

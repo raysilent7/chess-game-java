@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b302a729-eebe-4258-8a25-85adc9716ad0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/Piece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gamematch/ChessMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamematch/ChessMatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/matchpieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/matchpieces/King.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/matchpieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/matchpieces/Rook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/program/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/UI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/program/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="27" column="69" lean-forward="true" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
+            <state relative-caret-position="203">
+              <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/program/UI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="62" column="85" selection-start-line="62" selection-start-column="85" selection-end-line="62" selection-end-column="85" />
+            <state relative-caret-position="203">
+              <caret line="54" column="8" lean-forward="true" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#clearScreen#0;class#UI#0" />
@@ -51,16 +48,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gamematch/ChessMatch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="30" column="53" lean-forward="true" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+            <state relative-caret-position="218">
+              <caret line="70" column="82" selection-start-line="70" selection-start-column="82" selection-end-line="70" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ChessMatch#0;class#ChessMatch#0" />
                 <element signature="method#getPieces#0;class#ChessMatch#0" />
-                <element signature="method#performChessMove#0;class#ChessMatch#0" />
+                <element signature="method#possibleMoves#0;class#ChessMatch#0" />
                 <element signature="method#makeMove#0;class#ChessMatch#0" />
-                <element signature="method#validateSourcePosition#0;class#ChessMatch#0" />
                 <element signature="method#validateTargetPosition#0;class#ChessMatch#0" />
+                <element signature="method#nextTurn#0;class#ChessMatch#0" />
                 <element signature="method#placeNewPiece#0;class#ChessMatch#0" />
                 <element signature="method#initialSetup#0;class#ChessMatch#0" />
               </folding>
@@ -69,26 +66,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gameboard/Position.java">
+        <entry file="file://$PROJECT_DIR$/src/matchpieces/King.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="255">
+              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
               <folding>
-                <element signature="method#Position#0;class#Position#0" />
-                <element signature="method#setValues#0;class#Position#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gameboard/Piece.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-              <folding>
-                <element signature="method#Piece#0;class#Piece#0" />
-                <element signature="method#isThereAnyPossibleMove#0;class#Piece#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#canMove#0;class#King#0" />
+                <element signature="method#possibleMoves#0;class#King#0" />
               </folding>
             </state>
           </provider>
@@ -97,11 +82,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/matchpieces/Rook.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="180">
+              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#possibleMovies#0;class#Rook#0" />
+                <element signature="method#possibleMoves#0;class#Rook#0" />
               </folding>
             </state>
           </provider>
@@ -131,11 +116,11 @@
         <option value="$PROJECT_DIR$/src/gamematch/ChessException.java" />
         <option value="$PROJECT_DIR$/src/gamematch/ChessPiece.java" />
         <option value="$PROJECT_DIR$/src/gameboard/Position.java" />
-        <option value="$PROJECT_DIR$/src/matchpieces/King.java" />
-        <option value="$PROJECT_DIR$/src/matchpieces/Rook.java" />
         <option value="$PROJECT_DIR$/src/gameboard/Piece.java" />
-        <option value="$PROJECT_DIR$/src/gamematch/ChessMatch.java" />
+        <option value="$PROJECT_DIR$/src/matchpieces/Rook.java" />
+        <option value="$PROJECT_DIR$/src/matchpieces/King.java" />
         <option value="$PROJECT_DIR$/src/program/Main.java" />
+        <option value="$PROJECT_DIR$/src/gamematch/ChessMatch.java" />
         <option value="$PROJECT_DIR$/src/program/UI.java" />
       </list>
     </option>
@@ -154,6 +139,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,12 +181,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563996724957" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564062429223" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -255,14 +240,28 @@
       <option name="project" value="LOCAL" />
       <updated>1563994435425</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Printing possible moves">
+      <created>1563996739858</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1563996739858</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Implementing King">
+      <created>1563998446086</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1563998446086</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2659091" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27045456" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -271,7 +270,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22077923" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29220778" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -331,7 +330,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="BoardException and Defensive Programming" />
     <MESSAGE value="PossibleMoves (rook)" />
-    <option name="LAST_COMMIT_MESSAGE" value="PossibleMoves (rook)" />
+    <MESSAGE value="Printing possible moves" />
+    <MESSAGE value="Implementing King" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing King" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -417,6 +418,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/Piece.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+          <folding>
+            <element signature="method#Piece#0;class#Piece#0" />
+            <element signature="method#isThereAnyPossibleMove#0;class#Piece#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/gameboard/Position.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -430,69 +442,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/matchpieces/Rook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        <state relative-caret-position="180">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#possibleMovies#0;class#Rook#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gamematch/ChessMatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="30" column="53" lean-forward="true" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#ChessMatch#0;class#ChessMatch#0" />
-            <element signature="method#getPieces#0;class#ChessMatch#0" />
-            <element signature="method#performChessMove#0;class#ChessMatch#0" />
-            <element signature="method#makeMove#0;class#ChessMatch#0" />
-            <element signature="method#validateSourcePosition#0;class#ChessMatch#0" />
-            <element signature="method#validateTargetPosition#0;class#ChessMatch#0" />
-            <element signature="method#placeNewPiece#0;class#ChessMatch#0" />
-            <element signature="method#initialSetup#0;class#ChessMatch#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/program/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="69" lean-forward="true" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#possibleMoves#0;class#Rook#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/matchpieces/King.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        <state relative-caret-position="255">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#possibleMovies#0;class#King#0" />
+            <element signature="method#canMove#0;class#King#0" />
+            <element signature="method#possibleMoves#0;class#King#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameboard/Piece.java">
+    <entry file="file://$PROJECT_DIR$/src/program/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        <state relative-caret-position="203">
+          <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
           <folding>
-            <element signature="method#Piece#0;class#Piece#0" />
-            <element signature="method#isThereAnyPossibleMove#0;class#Piece#0" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gamematch/ChessMatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="70" column="82" selection-start-line="70" selection-start-column="82" selection-end-line="70" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#ChessMatch#0;class#ChessMatch#0" />
+            <element signature="method#getPieces#0;class#ChessMatch#0" />
+            <element signature="method#possibleMoves#0;class#ChessMatch#0" />
+            <element signature="method#makeMove#0;class#ChessMatch#0" />
+            <element signature="method#validateTargetPosition#0;class#ChessMatch#0" />
+            <element signature="method#nextTurn#0;class#ChessMatch#0" />
+            <element signature="method#placeNewPiece#0;class#ChessMatch#0" />
+            <element signature="method#initialSetup#0;class#ChessMatch#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/program/UI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="62" column="85" selection-start-line="62" selection-start-column="85" selection-end-line="62" selection-end-column="85" />
+        <state relative-caret-position="203">
+          <caret line="54" column="8" lean-forward="true" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#clearScreen#0;class#UI#0" />
