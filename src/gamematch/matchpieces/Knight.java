@@ -1,4 +1,4 @@
-package matchpieces;
+package gamematch.matchpieces;
 
 import gameboard.Board;
 import gameboard.Position;

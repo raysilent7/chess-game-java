@@ -1,14 +1,13 @@
-package matchpieces;
+package gamematch.matchpieces;
 
 import gameboard.Board;
 import gameboard.Position;
 import gamematch.ChessPiece;
 import gamematch.Color;
 
-public class Bishop extends ChessPiece {
+public class Rook extends ChessPiece {
 
-
-    public Bishop(Board board, Color color) {
+    public Rook(Board board, Color color) {
         super(board, color);
     }
 
@@ -18,41 +17,41 @@ public class Bishop extends ChessPiece {
 
         Position p = new Position(0, 0);
 
-        // diagonal: up-left
-        p.setValues(position.getRow() - 1, position.getColumn() - 1);
+        // up
+        p.setValues(position.getRow() - 1, position.getColumn());
         while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
-            p.setValues(p.getRow() - 1, p.getColumn() - 1);
+            p.setRow(p.getRow() - 1);
         }
         if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        // diagonal: up-right
-        p.setValues(position.getRow() - 1, position.getColumn() + 1);
+        // left
+        p.setValues(position.getRow(), position.getColumn() - 1);
         while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
-            p.setValues(p.getRow() - 1, p.getColumn() + 1);
+            p.setColumn(p.getColumn() - 1);
         }
         if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        // diagonal: down-right
-        p.setValues(position.getRow() + 1, position.getColumn() + 1);
+        // right
+        p.setValues(position.getRow(), position.getColumn() + 1);
         while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
-            p.setValues(p.getRow() + 1, p.getColumn() + 1);
+            p.setColumn(p.getColumn() + 1);
         }
         if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        // diagonal: down-left
-        p.setValues(position.getRow() + 1, position.getColumn() - 1);
+        // down
+        p.setValues(position.getRow() + 1, position.getColumn());
         while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
-            p.setValues(p.getRow() + 1, p.getColumn() - 1);
+            p.setRow(p.getRow() + 1);
         }
         if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
@@ -62,7 +61,7 @@ public class Bishop extends ChessPiece {
     }
 
     @Override
-    public String toString() {
-        return "B";
+    public String toString () {
+        return "R";
     }
 }
