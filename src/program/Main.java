@@ -1,60 +1,33 @@
 package program;
 
-import gamematch.ChessException;
-import gamematch.ChessMatch;
-import gamematch.ChessPiece;
-import gamematch.ChessPosition;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
+import java.io.IOException;
 
-public class Main {
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
+            AnchorPane anchorPane = loader.load();
+
+            Scene mainScene = new Scene(anchorPane);
+            primaryStage.setScene(mainScene);
+            primaryStage.setTitle("Basic Chess Game");
+            primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public static void main(String[] args) {
+        launch(args);
 
-        Scanner sc = new Scanner(System.in);
-        ChessMatch chessMatch = new ChessMatch();
-        List<ChessPiece> captured = new ArrayList<>();
-
-        while (!chessMatch.isCheckMate()) {
-            try {
-                UI.clearScreen();
-                UI.printMatch(chessMatch, captured);
-                System.out.println();
-                System.out.print("Source: ");
-                ChessPosition source = UI.readChessPosition(sc);
-
-                boolean[][] possibleMoves = chessMatch.possibleMoves(source);
-                UI.clearScreen();
-                UI.printBoard(chessMatch.getPieces(), possibleMoves);
-                System.out.println();
-                System.out.print("Target: ");
-                ChessPosition target = UI.readChessPosition(sc);
-
-                ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
-
-                if (capturedPiece != null) {
-                    captured.add(capturedPiece);
-                }
-
-                if (chessMatch.getPromoted() != null) {
-                    System.out.print("Enter piece type for promotion (B/N/Q/R): ");
-                    String type = sc.nextLine();
-                    chessMatch.replacePromotedPiece(type);
-                }
-            }
-            catch (ChessException excp) {
-                System.out.println(excp.getMessage());
-                sc.nextLine();
-            }
-            catch (InputMismatchException excp) {
-                System.out.println(excp.getMessage());
-                sc.nextLine();
-            }
-        }
-        UI.clearScreen();
-        UI.printMatch(chessMatch, captured);
     }
 }
